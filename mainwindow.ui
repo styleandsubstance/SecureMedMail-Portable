@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>424</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="nextButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>380</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next -&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>380</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;- Back</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="containerWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>572</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="NavigationHome" name="navigationHome"/>
+    <widget class="UploadFile" name="uploadFile"/>
+    <widget class="UploadProgress" name="uploadProgress"/>
+    <widget class="DownloadFile" name="downloadFile"/>
+    <widget class="DownloadProgress" name="downloadProgress"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>612</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>NavigationHome</class>
+   <extends>QWidget</extends>
+   <header>navigationhome.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UploadFile</class>
+   <extends>QWidget</extends>
+   <header>uploadfile.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UploadProgress</class>
+   <extends>QWidget</extends>
+   <header>uploadprogress.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DownloadFile</class>
+   <extends>QWidget</extends>
+   <header>downloadfile.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DownloadProgress</class>
+   <extends>QWidget</extends>
+   <header>downloadprogress.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
